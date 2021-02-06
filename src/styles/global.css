@@ -1,0 +1,13 @@
+html {
+    background-color: aliceblue;
+}
+
+p {
+    color: blue;
+}
+
+.testStyle {
+    p {
+        color: red;
+    }
+}
