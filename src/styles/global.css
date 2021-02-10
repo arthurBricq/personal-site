@@ -1,13 +1,19 @@
 html {
-    background-color: aliceblue;
+    background-color: white;
 }
 
-p {
-    color: blue;
+.imageContainer {
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 23px;
 }
 
-.testStyle {
-    p {
-        color: red;
-    }
+.img {
+    border-radius: 1cm;
+}
+
+.textHighlight {
+    color: black ; 
+    font-weight: bold ;
 }

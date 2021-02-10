@@ -12,7 +12,9 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
