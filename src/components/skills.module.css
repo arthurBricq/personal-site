@@ -1,0 +1,12 @@
+.container {
+    background-color: aliceblue;
+    padding: 11px;
+    padding-bottom: 0px;
+    border-radius: 9px;
+}
+
+.listItem {
+    display: inline-block;
+    line-height: 20px;
+    margin-bottom: 35px;
+}

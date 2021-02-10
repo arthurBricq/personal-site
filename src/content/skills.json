@@ -1,0 +1,36 @@
+{
+    "skills": [
+        {
+            "name": "High-Level Programming",
+            "content": [
+                ["Python", "Machine Learning / Data Science / Deep Learning / Robotics"],
+                ["Swift", "iOS Mobile or Desktop applications (Apple Ecosystem)"],
+                ["Java", "Android Mobile Applications, Desktop Applications, Scientific Computing"],
+                ["Matlab", "Scientific Computing, Data Science"],
+                ["JavaScript", "React (like this website) & React Native"] 
+            ]
+        },
+        {
+            "name": "Low-Level Programming", 
+            "content": [
+                ["C / C++", "Programming microcontrollers"],
+                ["PCB Design", "Design of PCBs (using Kicad) with manufacturing"],
+                ["Motor Control", "Using microcontrollers"]
+            ]    
+        },
+        {
+            "name": "Linux",
+            "content": [
+                ["Linux", "Linux Proficiency and long personal interest in the open source community."],
+                ["ROS2", "Robot OS (ubuntu) experience"],
+                ["Embebbed electronics", "I was always a fan of Raspberry Pis, and I worked a lot with a Jetson Nano"]
+            ]
+        },
+        {
+            "name": "Mechanical Engineering",
+            "content": [
+                ["Mechanical Design", "I have experience with Catia and with Simulink."]
+            ]
+        }
+    ]
+}
