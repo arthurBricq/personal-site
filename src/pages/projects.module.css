@@ -1,0 +1,56 @@
+.footnote {
+    font-size: small;
+    color: gray;
+    margin: 0px;
+}
+
+.projectTitle {
+    margin-top: 20;
+}
+
+.hr {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.featuredImage {
+    width: 700px;
+    margin-left: 10px;
+}
+
+.keyword {
+    display: inline-block;
+    margin-inline-start: 10px;
+    padding: 6px;
+    color: grey;
+    border: 2px solid grey;
+    border-radius: 7px;
+}
+
+.keywordButton {
+    margin-bottom: 15px;
+}
+
+.buttonSelected {
+    background-color: yellow;
+}
+
+.horDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.keywordsSelect {
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding-bottom: 4px;
+}

@@ -26,6 +26,8 @@ export default function Home({data}) {
     <Layout>
       <Header headerText="Welcome"/>
       <p>My name is Arthur Bricq, I am a robotic master student at EPFL passionated by new technologies. This is my personal website where you will discover my passions, my skills and a few projects.</p>
+      <p>This website - by the way - was made fully by myself, in React using Gatsby (to be deployed statically...). Though I am no expert in Design, I hope you appreciate the experience and feel free to give me hints on how to make it better.</p>
+      <p>So this is me and welcome here !</p>
 
       <div className="imageContainer">
         <Img fixed={data.imageOne.childImageSharp.fixed} className="img"/>

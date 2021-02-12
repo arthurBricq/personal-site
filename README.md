@@ -21,3 +21,10 @@ This repository contains my gatbsy personal site, to presents a few projects.
   - Weather App
   - Animal Trap
 - About: more about this personal site
+
+## To publish
+
+To publish, run the following commands:
+`gastby clean`
+`gatsby build --prefix-paths`
+`npm run deploy`
