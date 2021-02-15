@@ -47,7 +47,7 @@ export default function Home({data}) {
 
 export const query = graphql`
   query {
-    imageOne: file(relativePath: { eq: "images/self2.jpeg" }) {
+    imageOne: file(relativePath: { eq: "images/self3.jpeg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
