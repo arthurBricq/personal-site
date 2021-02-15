@@ -1,0 +1,29 @@
+.container {
+    display: inline-flex;
+    width: 100%;
+}
+
+.contentContainer {
+    width: 75%;
+}
+
+.tableOfContent {
+    width: 25%;
+    padding-left: 20px;
+    padding-top: 100px;
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .tableOfContent {
+        display: none;
+    }
+
+    .contentContainer {
+        width: 100%;
+    }
+}
+
+.contentLink {
+    margin-bottom: 20px;
+}

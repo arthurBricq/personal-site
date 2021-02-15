@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { titleToId } from '../utils/titleToId';
 
 export default function Header(props) {
     const title = props.headerText ; 
-    return <h1>{title}</h1>
-
+    const id = titleToId(title) ; 
+    return <h1 id={id}>{title}</h1>
 }

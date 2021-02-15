@@ -2,7 +2,7 @@ import * as React from "react"
 
 export default function Footer() {
     return <footer style={{
-		       "text-align": "center"
+		       "textAlign": "center"
 		   }}>
 	       <p>
 		   &copy; 2021, Arthur Bricq. 
