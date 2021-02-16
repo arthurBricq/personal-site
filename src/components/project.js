@@ -24,7 +24,14 @@ export default function Project({node, key}) {
     <div key={key}>
       <div className={styles.header}>
         <div>
-          <h2 className={styles.projectTitle} id={id}>{node.frontmatter.title}</h2>
+          <div style={{display: "flex", alignItems:"center", justifyContent:"flex-start"}}>
+            <h2 className={styles.projectTitle} id={id}>{node.frontmatter.title}</h2>
+            {
+              node.frontmatter.github && (
+                <a style={{backgroundImage:"none", color:"grey", marginTop: "30px", marginLeft: "40px"}} href={node.frontmatter.github}>[Visit on Github]</a>
+              )
+            }
+          </div>
           <ul style={{margin: "0px"}}>
           {
             node.frontmatter.keywords.map((word, index) => (

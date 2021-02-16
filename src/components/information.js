@@ -6,7 +6,7 @@ import Styles from "./information.module.css"
 
 function ImageButton({fixed, link}) {
     return (
-    <a href={link}>
+    <a href={link} style={{backgroundImage: "none"}}>
         <button className={Styles.imageButton}>
             <div className={Styles.imageContainer}>
                 <Img fixed={fixed} className={Styles.img}/>
@@ -54,9 +54,9 @@ export default function Information({}) {
     return (
         <div>
             <div className={Styles.container}>
-                <ImageButton fixed={data.insta.childImageSharp.fixed} link="https://www.instagram.com/arthurbricq/"/>
                 <ImageButton fixed={data.linkedin.childImageSharp.fixed} link="https://www.linkedin.com/in/arthur-bricq-737548153/"/>
                 <ImageButton fixed={data.github.childImageSharp.fixed} link="https://github.com/arthurBricq"/>
+                <ImageButton fixed={data.insta.childImageSharp.fixed} link="https://www.instagram.com/arthurbricq/"/>
             </div>
         </div>
     )

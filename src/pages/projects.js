@@ -39,7 +39,8 @@ export default function Projects({data}) {
   return (
     <Layout>
       <Header headerText="Discover some of my projects"/>
-      <p>Here is a selection of some projects I have come to realize. For some of them, more documentation is available under the github link !</p>
+      <p>Throughout my time as a student, I had to opportunity to work on several projects and I have since some time felt a need to <strong>capture</strong> the value created during those projects. Sometimes, it was a university project and other times it was projects I had done by myself ; but all the times that I was tasked to do a big project, I loved doing it. This is my attempt to save some of what I created. </p>
+      <p>So here is a selection of a few projects I have come to realize. Many of the presentation includes pictures of even videos !</p>
 
       <div className={styles.keywordsSelect}>
         <div className={styles.horDiv}>
@@ -66,7 +67,7 @@ export default function Projects({data}) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___priority], order: ASC }) {
       totalCount
       edges {
         node {
@@ -75,6 +76,7 @@ export const query = graphql`
             title
             description
             keywords
+            github
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 800) {
