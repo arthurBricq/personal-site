@@ -10,6 +10,8 @@ import "../styles/global.css"
 import Skills from "../components/skills"
 import SkillsJSON from "../content/skills.json"
 
+import Bf from "../components/bf"
+
 const TextHighlight = ({text}) => (
   <span className="textHighlight">{text}</span>
 )
@@ -41,6 +43,15 @@ export default function Home({data}) {
       <p>Being a <span className="textHighlight">Robotic Engineer</span> require a set of many different skills. It is mostly for this reason I decided to go for robotics: keep an general knowledge, be a system expert. </p>
       <p>I have gained experienced in mostly 3 fields: <span className="textHighlight">Programming, Electronics & Mechanics</span>. Programmation was always something I enjoyed. Mechanical Engineering is something I learned during my bachelor. As for Electronics, I learned a lot during my master. Here is an overview of my skills.</p>
       {skillSection}
+
+      <Header headerText="More about me"/>
+      <p>So since this is about me, let's reveal my biggest passion. Well, I am quite into <Bf>outdoor sports</Bf> ! I love to be outside, even if it is just for a walk in the forest, or for what I call 'microadventures' (be out for the weekends) up to weeks-long hikes during my vacations. For the winter times, I enjoy alpine skying, backcountry skying or snowshoeing tours. And for when the sun is back, I try to spend as many weekends as possible sleeping under my tent, walking during the days and then enjoying landscapes like this one.</p>
+
+      <div className="imageContainer">
+        <Img fixed={data.image2.childImageSharp.fixed} className="img"/>
+      </div>
+
+      <p>Being quite concerned about the climate probblems, I try to care about my environmental footprint. I believe that science has a big role to play in the incoming years to 'save' our planet. In my hopes, there is at the jonction of Low-Techs and High-Techs a set of local solutions that could be the keys to many troubles.</p>
     </Layout>
   )
 }
@@ -52,6 +63,15 @@ export const query = graphql`
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
         fixed(width: 250, height: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }, 
+    image2: file(relativePath: { eq: "images/landscape.jpeg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 500, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }

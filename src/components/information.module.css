@@ -1,0 +1,16 @@
+.imageContainer {
+   margin: 10px;
+}
+
+.imageButton {
+    background: transparent;
+    border: none;
+}
+
+.img {
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
