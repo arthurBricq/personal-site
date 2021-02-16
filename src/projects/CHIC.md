@@ -5,6 +5,7 @@ description: China Hardware Innovation Center, 1 year and a half long project in
 priority: 1
 featuredImage: ../images/chic_sensor.jpg
 github: https://github.com/arthurBricq/Roots
+youtube: https://youtu.be/_SN1TQER2w4
 ---
 
 **China Hardware Innovation Center** (CHIC) was a year and a half long project in a team of 5 skilled students (2 engineers, 2 design students and 1 business student), where we had to entirely designed from scracth a **connected device**, in our case a **smart sensor for home plants**, that can transform any plant into a highly sensitive touch sensor and generate beautiful visuals. 

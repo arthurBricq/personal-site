@@ -5,6 +5,7 @@ description: Robottle is an autonomous robot able to collect plastic bottles in 
 featuredImage: ../images/robottle.jpg
 priority: 1
 github: https://github.com/arthurBricq/ros_robottle
+youtube: https://youtu.be/XJpJSuhSZN4
 ---
 
 Robottle was made for an academic event hosted at EPFL, where autonomous robots have to collect plastic bottles in a random environement and bring them back to a recycling area.

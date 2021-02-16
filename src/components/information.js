@@ -1,20 +1,8 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import {graphql} from "gatsby"
 import Styles from "./information.module.css"
-
-function ImageButton({fixed, link}) {
-    return (
-    <a href={link} style={{backgroundImage: "none"}}>
-        <button className={Styles.imageButton}>
-            <div className={Styles.imageContainer}>
-                <Img fixed={fixed} className={Styles.img}/>
-            </div>
-        </button>
-    </a>
-    )
-}
+import ImageButton from "./imageButton"
 
 export default function Information({}) {
 

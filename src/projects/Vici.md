@@ -5,6 +5,7 @@ description: During a 3 days hackhathon, we developed a mobile app to help local
 priority: 3
 github: https://github.com/arthurBricq/Vici
 featuredImage: ../images/vici1.jpg
+youtube: https://youtu.be/t6okgj3G-gM
 ---
 
 Vici was realized in a lapse time of 3 days, by the end of the weekend there was a fully functionable iOS app, a website done classicaly (HTML + JS + CSS) and a Python server coded in Django running on a rapsberry pi. Unfortunately, this project wasn't kept alive much longer after the hackathon though you can still access its project page at this [link](https://devpost.com/software/vici). 

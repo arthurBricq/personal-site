@@ -4,6 +4,7 @@ keywords: [Python, Pandas]
 description: Data Science Project, rewarded as in the 'best 10 course projects' (out of 138 projects).
 priority: 2
 github: https://github.com/epfl-ada/ada-2020-project-milestone-p3-p3_chic
+youtube: https://youtu.be/gfrJvs2dMmM
 ---
 
 Check out the webpage of this project: [click here](https://arthurbricq.github.io/DiplomacyBetrayals/)

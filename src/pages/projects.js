@@ -33,14 +33,14 @@ export default function Projects({data}) {
 
   // React Component with all the projects
   const projectsSection = projects.map(({node}, index) => 
-    <Project node={node} />
+    <Project node={node} githubLogo={data.github.childImageSharp.fixed} youtubeLogo={data.youtube.childImageSharp.fixed}/>
   )
 
   return (
     <Layout>
       <Header headerText="Discover some of my projects"/>
       <p>Throughout my time as a student, I had to opportunity to work on several projects and I have since some time felt a need to <strong>capture</strong> the value created during those projects. Sometimes, it was a university project and other times it was projects I had done by myself ; but all the times that I was tasked to do a big project, I loved doing it. This is my attempt to save some of what I created. </p>
-      <p>So here is a selection of a few projects I have come to realize. Many of the presentation includes pictures of even videos !</p>
+      <p>So here is a selection of a few projects I have come to realize. Many of the presentation includes pictures of even videos.</p>
 
       <div className={styles.keywordsSelect}>
         <div className={styles.horDiv}>
@@ -77,6 +77,7 @@ export const query = graphql`
             description
             keywords
             github
+            youtube
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 800) {
@@ -89,6 +90,24 @@ export const query = graphql`
           html
         }
       }
-    }
+    },
+    github: file(relativePath: { eq: "images/github.png" }) {
+        childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 40, height: 40) {
+            ...GatsbyImageSharpFixed
+            }
+        }
+    }, 
+    youtube: file(relativePath: { eq: "images/youtube.png" }) {
+        childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 45, height: 30) {
+            ...GatsbyImageSharpFixed
+            }
+        }
+    }, 
   }
   `
