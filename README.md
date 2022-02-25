@@ -9,17 +9,9 @@ This repository contains my gatbsy personal site, to presents a few projects.
   - passions
 - Contact: how to contact me, link to my resume 
   - link to resume
-  - yotube page
+  - youtube page
   - github account
-- Projects page: page presenting my favorite projects
-  - robottle
-  - CHIC
-  - ada
-  - image analysis
-  - Vici
-  - Achalandée
-  - Weather App
-  - Animal Trap
+- Projects page: page presenting my favorite projects. Each project is simply encoded by a markdown page, isn't that neat ? 
 - About: more about this personal site
 
 ## To publish
