@@ -4,7 +4,7 @@ keywords: [Chess, C++]
 description: A fully functional Chess Engine written completely from scratch in C++
 priority: 2
 featuredImage: ../images/chess_engine.png
-github: https://github.com/arthurBricq/Roots
+github: https://github.com/arthurBricq/chess
 ---
 
 I have written a fully functional Chess Engine, starting from scratch and using nothing else than the standard library in C++ and SFML for graphics. You can easily try it out in your own computer by compiling the project. 

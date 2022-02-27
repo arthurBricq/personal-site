@@ -3,7 +3,7 @@
         {
             "name": "High-Level Programming",
             "content": [
-                ["Python", "Machine Learning / Data Science / Deep Learning / Robotics"],
+                ["Python", "Machine Learning / Data Science / Deep Learning / Robotics / Computer Vision"],
                 ["Swift", "iOS Mobile or Desktop applications (Apple Ecosystem)"],
                 ["Java", "Android Mobile Applications, Desktop Applications, Scientific Computing"],
                 ["Matlab", "Scientific Computing, Data Science"],
