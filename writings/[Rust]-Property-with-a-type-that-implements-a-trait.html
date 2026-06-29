@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<title>Personal Website</title>
+<meta content="My personal website" name="description"/>
+<meta content="Arthur Bricq" name="author"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<!--Header section that is dynmically loaded-->
+<div class="header_container" id="header_container">
+<header>
+    Arthur Bricq
+</header>
+<nav>
+<a href="../resume.pdf">My resume</a>
+<a href="../writings.html">Writing</a>
+<a href="../projects.html">Projects</a>
+<a href="../index.html">About</a>
+</nav>
+</div>
+<article>
+<div id="content">
+<h1>Struct member with type that implements a trait in Rust</h1>
+<p>I have found that it is not trivial (<em>for someone who is learning Rust, like me</em>) to have a struct which has an attribute whose type inherits from a trait. Such situation typically happens when defining the behavior of a callback.</p>
+<p>First, let's define the types we will be working with.</p>
+<pre><code class="language-rust">/// Defines a trait
+trait Callback {
+    fn hello(&amp;self);
+}
+
+/// A struct that contains some data.
+/// In this case, Container contains a reference to an object that lives 
+/// outside of this scopet. herefore we need to annotate the lifetime specyfier
+struct Container&lt;'a&gt; {
+    text: &amp;'a str
+}
+
+// Let's define a constructor ...
+impl &lt;'a&gt; Container &lt;'a&gt; {
+   fn new(text: &amp;'a str) -&gt; Self {
+       Self {text}
+   } 
+}
+
+// Let's make our struct implement the trait `Callback`
+impl &lt;'a&gt; Callback for Container &lt;'a&gt; {
+    fn hello(&amp;self) {
+       println!("Hello: {}", self.text) ;
+    } 
+}
+</code></pre>
+<p>Now, our goal is to create a new type <code>Boo</code> which has an attribute that implements <code>Callback</code> (but we don't care which class in particular). So, exactly like an Interface in Java. There are two ways to do this.</p>
+<h3>Using generic types</h3>
+<p>Note that this way only works if the instance of the struct holding the callback (in this case <code>Boo</code>), only supports one kind of type of callback.</p>
+<pre><code class="language-rust">/// If you want another struct which has our trait as a field, this is one easy
+/// approach. However, each instance of `Boo` will only be able to have only 1 
+/// type of field `foo`.
+struct Boo &lt;T: Callback&gt; {
+    foo: T
+}
+
+// The implementation of the struct with generic type is similar as for lifetime
+// specifiers. 
+impl&lt;T: Callback&gt; Boo&lt;T&gt; {
+    fn new(cb: T) -&gt; Self {
+        Self {
+            foo: cb
+        }
+    }
+
+    /// A function that calls on our callback
+    fn greet(&amp;self) {
+        self.foo.hello();
+    }
+}
+
+fn main() {
+    let c = Container::new("salut");
+    c.hello();
+
+    let b = Boo::new(c);
+    b.greet();
+}
+</code></pre>
+<h3>Using <code>Box</code></h3>
+<p>This approach is the better one if you want to change the callback during the lifetime of "foo". </p>
+<pre><code class="language-rust">
+/// Another approach, which allows to support different types on the same object,
+/// is by using a box
+struct DynamicBoo {
+    // A box is a unique pointer
+    foo: Box&lt;dyn Callback&gt;
+}
+
+impl DynamicBoo {
+    fn new(cb: Box&lt;dyn Callback&gt;) -&gt; Self {
+        Self {
+            foo: cb
+        }
+    }    
+
+    fn greet(&amp;self) {
+        self.foo.hello();
+    }
+}
+
+fn main() {
+    let d = DynamicBoo::new(Box::new(Container::new("coucou")));
+    d.greet();
+}
+</code></pre>
+<p>Here is the <a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=0391a65d099601b3855c6732a63c6bec">link to rust playground</a> with this code.</p>
+</div>
+</article>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<title>Personal Website</title>
+<meta content="My personal website" name="description"/>
+<meta content="Arthur Bricq" name="author"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<!--Header section that is dynmically loaded-->
+<div class="header_container" id="header_container">
+<header>
+    Arthur Bricq
+</header>
+<nav>
+<a href="../resume.pdf">My resume</a>
+<a href="../writings.html">Writing</a>
+<a href="../projects.html">Projects</a>
+<a href="../index.html">About</a>
+</nav>
+</div>
+<article>
+<div id="content">
+<h1>Chess Engine in C++</h1>
+<p>I have written a fully functional Chess Engine, starting from scratch and using nothing else than the standard library in C++ and SFML for graphics. You can easily try it out in your own computer by compiling the project. </p>
+<p>It was pretty difficult to finish the project, there was many challenges. Here's a few of the highlights of the project
+- A lot of optimisation was required. Since a chess engine has to go through millions of positions quickly, you have to think about optimisation, a lot ! It was pretty new for me.
+- The data-model has to be efficient, but also, easy to use ! The rules of chess are not so trivial, so they have to be thought along with the data-model
+- The tree search of the solver, well, is quite a big tree. I have implemented alpha-beta prunning search, and it works pretty well !</p>
+</div>
+</article>
+</body>
+</html>

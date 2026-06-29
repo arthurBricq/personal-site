@@ -1,0 +1,171 @@
+body {
+	margin: 0 auto;
+	max-width: 900px;
+	min-width: 0;
+	padding: 0 10px 25px;
+	font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+	background-color: #f8f9fa;
+}
+
+/* Laying out */
+
+h2 {
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+
+/* Font colors*/
+
+body {
+	color: #444;
+}
+
+h1, h2, strong {
+	color: #222;
+}
+
+blockquote {
+	color: #1d3557;
+	font-style: italic;
+}
+
+/* Links color */
+
+a {
+	color: #ffa64d;
+}
+
+/* Font size */
+
+header {
+	font-size: 22px;
+}
+nav {
+	font-size: 22px;
+}
+article {
+	font-size: 16px;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	font-size: 24px;
+}
+
+
+/*Properties of the main elements*/
+
+article {
+	border-top: 2px solid gray;
+	margin-top: 60px;
+}
+
+/*The header_container is the div that contain the header*/
+.header_container {
+	/*Display of the children*/
+	display: flex;
+	position: fixed;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/*Positioning of the bar*/
+	min-height: 60px;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: aliceblue;
+}
+
+header {
+	justify-self: left;
+	margin-left: 20px;
+}
+
+nav {
+	margin-right: 20px;
+	justify-self: flex-end;
+	letter-spacing: 1px;
+}
+
+nav a {
+	margin-left: 20px;
+}
+
+
+/*Images */
+
+img {
+	border-radius: 0px;
+	max-width: 100%;
+	border: 0px solid #ddd;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.thumbnail {
+	max-width: 200px;
+	max-height: 200px;
+}
+
+iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*Line break */
+
+br {
+	content: "";
+	margin: 2em;
+	display: block;
+	font-size: 24%;
+}
+
+
+.project_item {
+	list-style: square;
+	padding-top: 20px;
+	font-size: 24px;
+}
+
+
+/*Article page*/
+
+.date_box {
+	font-style: initial;
+}
+
+/*Projects Page*/
+
+.description {
+	font-style: italic;
+	padding-left: 50px;
+}
+
+.keyword {
+	font-weight: bold;
+	padding-left: 50px;
+}
+
+.new_project {
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	border-bottom: 2px solid gray;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 0px;
+}

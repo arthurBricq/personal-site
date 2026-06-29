@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<title>Personal Website</title>
+<meta content="My personal website" name="description"/>
+<meta content="Arthur Bricq" name="author"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<!--Header section that is dynmically loaded-->
+<div class="header_container" id="header_container">
+<header>
+    Arthur Bricq
+</header>
+<nav>
+<a href="../resume.pdf">My resume</a>
+<a href="../writings.html">Writing</a>
+<a href="../projects.html">Projects</a>
+<a href="../index.html">About</a>
+</nav>
+</div>
+<article>
+<div id="content">
+<h1>Vim-like Text Editor in Rust</h1>
+<p>Another of my latest personal project, written in Rust. Finding the proper architecture that always to quickly write "editor modes" (like in vim) while providing the most common functionalities of a text editor (copy-pasting, selection, edition, deletion, undo/redo) was a very interesting challenge. I did everything from scratch, without using any outside ressources. Of course, the end result is not a usable text editor (as it does not have many 'advanced' functionalities that are actually super usefull, like syntax highlighting).</p>
+<p>I still want to spend some time on this project to documentate the software architecture that I designed to solve this problem.</p>
+</div>
+</article>
+</body>
+</html>

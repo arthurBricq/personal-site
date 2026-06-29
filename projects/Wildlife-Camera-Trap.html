@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<title>Personal Website</title>
+<meta content="My personal website" name="description"/>
+<meta content="Arthur Bricq" name="author"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<!--Header section that is dynmically loaded-->
+<div class="header_container" id="header_container">
+<header>
+    Arthur Bricq
+</header>
+<nav>
+<a href="../resume.pdf">My resume</a>
+<a href="../writings.html">Writing</a>
+<a href="../projects.html">Projects</a>
+<a href="../index.html">About</a>
+</nav>
+</div>
+<article>
+<div id="content">
+<h1>Camera Trap with a Rapsberry PI</h1>
+<p>During the lockdown, I was observing at birds at my window and wondering that I'd like to see them from closer. I also happened to be in possetion of a <strong>Raspberry Pi</strong> with a super cool <strong>Pi camera v2.1 NoIR</strong>.</p>
+<p>So, with my friend Johan (<em>You can check out his own website, he is a great physicist and my adventure companion, go at this <a href="https://jfelisaz.eu/">link</a></em>) we decided to 'build' (<em>that's a big word</em>) a little box, equippe it with: the raspberry pi, some IR lights that we got from some old remotes, the camera and a phone battery. </p>
+<p><img alt="" src="../images/wildlife_trap.png"/></p>
+<p>Though it is really not great design (it was mostly for fun), we would take some great pictures of birds and it was a good practise of computer vision. In a few words, the algorithm looked for difference between the <strong>current image</strong> and the <strong>mean image</strong> of the stream. </p>
+</div>
+</article>
+</body>
+</html>
