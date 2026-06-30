@@ -84,6 +84,20 @@ article {
 header {
 	justify-self: left;
 	margin-left: 20px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.social {
+	display: inline-flex;
+	align-items: center;
+	color: #222;
+	font-size: 20px;
+}
+
+.social:hover {
+	color: #ffa64d;
 }
 
 nav {
